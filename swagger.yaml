@@ -6,6 +6,12 @@ info:
 servers:
 - url: https://temp-jobs-api-immv.onrender.com/api/v1
   variables: {}
+- url: http://localhost:5000/api/v1
+  description: Local development server
+  variables:
+    port:
+      default: '5000'
+      description: The port to use for the server
 paths:
   /auth/login:
     post:
