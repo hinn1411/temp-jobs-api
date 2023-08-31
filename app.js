@@ -39,10 +39,10 @@ app.use(xss());
 
 // extra packages
 
-// app.get("/", (req, res) => {
-//   res.send("<h1>Jobs API</h1><a href='/api-docs'>Link</a>");
-// });
-app.use("/", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+app.get("/", (req, res) => {
+  res.send("<h1>Jobs API</h1><a href='/api-docs'>Link</a>");
+});
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 // routes
 app.use("/api/v1/auth", authRouter);
